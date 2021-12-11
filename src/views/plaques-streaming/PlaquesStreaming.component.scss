@@ -1,0 +1,101 @@
+.plaques-streaming {
+  padding: 0 !important;
+
+  .search-toolbar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    .search-input {
+      float: right;
+      margin: 0 85px 0 10px;
+      position: relative;
+      width: 300px;
+    }
+  }
+
+  .reload-icon {
+    z-index: 9999;
+    float: right;
+    font-size: 25px;
+    margin: 10px 0;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &.search-icon {
+      position: absolute;
+      right: 35px;
+
+      &:hover {
+        opacity: 0.3 !important;
+      }
+
+      &.is-open {
+        opacity: 1;
+      }
+
+      &.arrow-icon {
+        right: 65px;
+
+        &:hover {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    height: calc(100vh);
+
+    .carousel-inner {
+      width: 900px;
+      margin: auto;
+
+      .carousel-item {
+        width: 900px;
+        height: 562px;
+
+        .plaque-container {
+          background-size: contain;
+          position: relative;
+          width: 900px;
+          height: 562px;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          padding: 0 60px;
+
+          .plaque-text {
+            font-size: 35px;
+            text-align: center;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  .slide-fade-enter-active,
+  .slide-fade-leave-active {
+    transition: all 0.3s ease;
+  }
+
+  .slide-fade-enter, .slide-fade-leave-to
+      /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
